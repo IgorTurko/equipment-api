@@ -1,0 +1,32 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false,
+      "impliedStrict": true
+    }
+  },
+  "plugins": ["@typescript-eslint", "ava", "sonarjs"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:ava/recommended",
+    "plugin:sonarjs/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": 0,
+    "curly": ["error", "all"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"],
+    "eqeqeq": ["error", "always"],
+    "ava/no-only-test": "error"
+  }
+}
