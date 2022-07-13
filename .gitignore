@@ -55,3 +55,8 @@ config.test.local.yml
 
 src/api/v1/schema/*.generated.ts
 certs
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
