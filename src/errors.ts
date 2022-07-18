@@ -5,6 +5,7 @@ export enum ErrorCodes {
   NOT_FOUND_ERROR = 'NOT_FOUND',
   VALIDATION_ERROR = 'VALIDATION_ERROR',
   NOT_IMPLEMENTED_ERROR = 'NOT_IMPLEMENTED',
+  DB_CONNECTION_ERROR = 'DB_CONNECTION_ERROR',
 }
 
 export class ApplicationError extends Error implements FastifyError {
@@ -35,6 +36,12 @@ export class NotFoundError extends ApplicationError {
 export class ValidationError extends ApplicationError {
   constructor(public message: string, code?: ErrorCodes) {
     super(message, code ? code : ErrorCodes.VALIDATION_ERROR);
+  }
+}
+
+export class DbConnectionError extends ApplicationError {
+  constructor(public message: string, code?: ErrorCodes) {
+    super(message, code ? code : ErrorCodes.DB_CONNECTION_ERROR);
   }
 }
 
