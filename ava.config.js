@@ -7,7 +7,7 @@ module.exports = {
   },
   files: ['src/**/*.test.ts'],
   typescript: {
-    compile: false,
+    compile: 'tsc',
     rewritePaths: {
       'src/': 'dist/',
     },

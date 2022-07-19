@@ -55,12 +55,12 @@ export default <FastifyPluginCallback>function routes(fastify, _options, next): 
     },
     handler: async (request, reply) => {
       const { id } = request.params;
-      const equipment = await fastify.repositories.equipment.findOne({ code: id });
-      if (!equipment) {
+      const equipmentItem = await fastify.repositories.equipment.findOne({ code: id });
+      if (!equipmentItem) {
         throw new NotFoundError('Equipment not found', id);
       }
 
-      reply.code(200).send({ data: equipment });
+      reply.code(200).send({ data: equipmentItem });
     },
   });
 
