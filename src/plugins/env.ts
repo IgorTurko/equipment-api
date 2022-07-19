@@ -21,6 +21,7 @@ declare module 'fastify' {
       NODE_ENV: string;
       MONGO_URL: string;
       ORIGINS: string;
+      HOST: string;
     };
   }
 }

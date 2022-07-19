@@ -9,5 +9,6 @@ export const EnvironmentSchema = {
     NODE_ENV: { type: 'string' },
     MONGO_URL: { type: 'string' },
     ORIGINS: { type: 'string' },
+    HOST: { type: 'string' },
   },
 } as const;
