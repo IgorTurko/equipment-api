@@ -19,12 +19,12 @@ export const EquipmentSchema = {
       description: 'Address of equipment',
     },
     start_date: {
-      type: 'string',
+      type: ['null', 'string'],
       nullable: true,
       description: 'Date when equipment ran',
     },
     end_date: {
-      type: 'string',
+      type: ['null', 'string'],
       nullable: true,
       description: 'Date when equipment stopped',
     },
